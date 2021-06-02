@@ -1,6 +1,19 @@
-[
+{
+  "notes": [
     {
-        "title":"Test Title",
-        "text":"Test text"
+      "id": "1",
+      "title": "Test Title",
+      "text": "Test text"
+    },
+    {
+      "title": "asdfs",
+      "text": "fddfdf",
+      "id": "c2b1be13-7f03-4f8d-aad8-6e24019429ee"
+    },
+    {
+      "title": "adgdgdfdsfdf",
+      "text": "sadffdsfdsfdsdfs",
+      "id": "608ff287-3fd8-4f43-99ff-8e1e1bba0566"
     }
-]
+  ]
+}
