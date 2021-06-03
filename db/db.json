@@ -1,3 +1,29 @@
 {
-  "notes": []
+  "notes": [
+    {
+      "title": "Call bank on Friday",
+      "text": "254-318-3333",
+      "id": "a7780ec8-51c5-4653-ad89-52b93acc3a81"
+    },
+    {
+      "title": "Reschedule delivery",
+      "text": "Current: Tuesday 1 PM\nNew: Thursday 1 PM",
+      "id": "2423e412-20f8-413a-a221-f298bc2b40a2"
+    },
+    {
+      "title": "Finish payroll",
+      "text": "Don't forget to update salary for Employee #2846830!!",
+      "id": "0968712d-3b00-49f6-91dd-08a8b84744d5"
+    },
+    {
+      "title": "Check in with clients",
+      "text": "-Jane Hargrave @ The Boathouse\n-Monty Stein @ Rocky's LLC",
+      "id": "b3ba4315-c213-4ed4-b964-cc1c734ff5ec"
+    },
+    {
+      "title": "Client lunch on Thursday",
+      "text": "12:00 PM @ Molly's Cafe\nWith Jennifer and Hugh from Central Express",
+      "id": "6198e413-fa42-4fa5-886c-8494c5a08e07"
+    }
+  ]
 }
