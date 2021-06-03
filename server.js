@@ -3,25 +3,10 @@ const express = require('express');
 const path = require('path');
 const { notes } = require('./db/db.json');
 const { v4: uuidv4 } = require('uuid');
-// const {
-    // show,
-    // hide,
-    // getNotes,
-    // saveNote,
-    // deleteNote,
-    // renderActiveNote,
-    // handleNoteSave,
-    // handleNoteDelete,
-    // handleNoteView,
-    // handleNewNoteView,
-    // handleRenderSaveBtn,
-    // renderNoteList,
-    // getAndRenderNotes } = require('./public/assets/js/index.js')
 
 const app = express();
 const PORT = 3001;
 
-// Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
@@ -35,8 +20,7 @@ app.get('/notes', (req, res) => {
 });
 
 app.get('/api/notes', (req, res) => {
-    let results = notes;
-    res.json(results);
+    res.json(notes);
 });
 
 app.post('/api/notes', (req, res) => {
@@ -46,8 +30,20 @@ app.post('/api/notes', (req, res) => {
     fs.writeFileSync(
         path.join(__dirname, './db/db.json'),
         JSON.stringify({ notes }, null, 2)
-    )
+    );
+    res.json(notes);
 })
+
+app.delete('/api/notes/:id', (req, res) => {
+    const id = req.params.id;
+    const noteIndex = notes.findIndex(n => n.id == id);
+    notes.splice(noteIndex, 1);
+    fs.writeFileSync(
+        path.join(__dirname, './db/db.json'),
+        JSON.stringify({ notes }, null, 2)
+    );
+    res.json(notes);
+});
 
 app.listen(PORT, () => {
     console.log(`App listening on PORT ${PORT}`);
